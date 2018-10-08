@@ -15,11 +15,11 @@ def get_todo_all():
 
     try:
         user_dict = r_user.json()
-        data = OrderedDict()  # preserve order of dictionary values
+        data = OrderedDict()
         for user in user_dict:
             data['{}'.format(user["id"])] = []
             r_todo = requests.get('https://jsonplaceholder.typicode.com/todos?'
-                         'userId={}'.format(user["id"]))
+                                  'userId={}'.format(user["id"]))
             task_list = r_todo.json()
 
             for task in task_list:

@@ -3,10 +3,10 @@
 returns information about his/her TODO list progress for a
 given employee ID using a REST API and export data in the JSON format
 """
-from sys import argv
-from requests import get
-import json
 from collections import OrderedDict
+import json
+from requests import get
+from sys import argv
 
 
 def get_todo_all():
